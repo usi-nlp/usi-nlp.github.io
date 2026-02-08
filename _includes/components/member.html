@@ -1,6 +1,10 @@
 <div class="col-lg-3 col-md-4 text-center">
     <div class="service-box">
+      {% if include.member.img %}
         <img src="{{url}}/resources/img/lab_members/{{ include.member.img }}" class="member-photo wow text-primary" data-wow-delay=".1s">
+        {% else %}
+        <img src="{{url}}/resources/img/lab_members/profile_placeholder.png" class="member-photo wow text-primary" data-wow-delay=".1s">
+      {% endif %}
         <p><strong>{{ include.member.first_name }} {{ include.member.last_name}}</strong></p>
         <p class="text-muted">{{ include.member.role }}</p>
         <div class="socials">

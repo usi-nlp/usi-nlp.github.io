@@ -4,10 +4,14 @@
 {% include head.html %}
 
 <body id="page-top">
-  {% include nav.html %}
-  {% include header.html %}
-  {% include research-interests.html %}
-  {% include small_contact.html %}
+  <div class="split-layout">
+    <div class="split-left">
+      {% include header.html %}
+    </div>
+    <div class="split-right">
+      {% include nav.html %}
+    </div>
+  </div>
   {% include scripts.html %}
   <script src="js/index.js"></script>
 </body>

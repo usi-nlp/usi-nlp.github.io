@@ -34,7 +34,7 @@
     else {
         // add class when we first land on the page
         $('#mainNav').removeClass('affix-top');
-        $('#mainNav').addClass('affix');
+        // $('#mainNav').addClass('affix');
     }
 
     // Closes the Responsive Menu on Menu Item Click

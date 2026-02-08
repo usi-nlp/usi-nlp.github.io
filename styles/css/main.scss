@@ -4,9 +4,10 @@
 @charset "utf-8";
 
 // Example Defaults
-// $base-font-family: Helvetica, Arial, sans-serif;
-// $base-font-size:   16px;
-// $small-font-size:  $base-font-size * 0.875;
+$base-font-family: 'Hanken Grotesk', 'Raleway', Helvetica, Arial, sans-serif;
+$base-font-size:   20px;
+$small-font-size:  $base-font-size * 0.875;
+$base-font-weight: 300;
 // $base-line-height: 1.5;
 
 // $spacing-unit:     30px;
@@ -34,10 +35,10 @@
 // }
 
 // variables.less
-$theme-primary: #F05F40;
+$theme-primary: #212121;
 $theme-dark: #222;
-$theme-primary-attention: #EB3812;
-$theme-primary-background: #F7D9CF;
+$theme-primary-attention: #9CCC65;
+$theme-primary-background: #FAFAFA;
 $landing-image-darkening: 0.6;
 
 // Import partials from `sass_dir` (defaults to `_sass`)

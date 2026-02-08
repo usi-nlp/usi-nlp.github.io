@@ -12,6 +12,7 @@ hr {
     border-color: $theme-primary;
     border-width: 3px;
     max-width: 50px;
+    margin-left: 0;
 }
 
 hr.light {
@@ -21,6 +22,7 @@ hr.light {
 a {
     @include transition-all;
     color: $theme-primary;
+    text-decoration: underline;
     &:hover,
     &:focus {
         color: darken($theme-primary, 10%);
@@ -37,7 +39,7 @@ h6 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
     margin-bottom: 20px;
 }
@@ -72,8 +74,279 @@ aside {
 }
 
 
+// Split Layout for Homepage and Content Pages
 
-// Navigation
+.split-layout {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.split-left {
+    flex: 1;
+    position: relative;
+    margin-right: 500px; // Reserve space for fixed navbar
+}
+
+.split-left.split-content {
+    min-height: 100vh;
+    height: auto;
+    padding: 40px;
+    background-color: #f8f8f8;
+}
+
+.split-right {
+    width: 500px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+}
+
+// Mobile nav header (hidden on desktop)
+.mobile-nav-header {
+    display: none;
+}
+
+// Vertical Navigation
+
+.vertical-nav {
+    @include sans-serif-font;
+    
+    .nav-content {
+        padding: 40px;
+    }
+    
+    .nav-logo {
+        margin-bottom: 30px;
+        
+        img#usi {
+            width: 100%;
+            max-width: 200px;
+        }
+    }
+    
+    .nav-brand {
+        margin-bottom: 60px;
+        
+        a {
+            color: $theme-primary;
+            font-weight: 500;
+            font-size: 60px;
+            text-transform: uppercase;
+            text-decoration: none;
+            
+            &:hover,
+            &:focus {
+                color: darken($theme-primary, 10%);
+            }
+        }
+    }
+    
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+            margin-bottom: 30px;
+            
+            a {
+                color: $theme-dark;
+                font-size: 48px;
+                font-weight: 300;
+                text-transform: uppercase;
+                text-decoration: none;
+                @include transition-all;
+                
+                &:hover,
+                &:focus {
+                    color: $theme-primary;
+                }
+            }
+        }
+    }
+}
+
+// // Responsive split layout - tablet
+// @media (max-width: 991px) {
+//     .split-layout {
+//         flex-direction: column;
+//     }
+    
+//     .split-left {
+//         min-height: auto;
+//         margin-right: 0;
+//     }
+    
+//     .split-left.split-content {
+//         height: auto;
+//         min-height: auto;
+//         padding: 30px;
+//     }
+    
+//     .split-right {
+//         width: 100%;
+//         min-height: auto;
+//         position: relative;
+//         height: auto;
+//         padding: 40px 0;
+//     }
+    
+//     .vertical-nav {
+//         .nav-links li a {
+//             font-size: 24px;
+//         }
+//     }
+// }
+
+@media (min-width: 992px) {
+    #research .service-box {
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+// Mobile styles
+@media (max-width: 991px) {
+    .split-layout {
+        flex-direction: column;
+    }
+    
+    .split-left {
+        order: 2;
+        margin-right: 0;
+        margin-top: 60px; // Space for fixed mobile header
+    }
+    
+    .split-left.split-content {
+        padding: 20px;
+        min-height: auto;
+    }
+    
+    .split-right {
+        order: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        z-index: 1000;
+        padding: 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .vertical-nav {
+        width: 100%;
+        
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: white;
+        }
+        
+        .mobile-brand {
+            color: $theme-primary;
+            font-weight: 700;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        
+        .menu-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            
+            .hamburger-icon {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background: $theme-dark;
+                position: relative;
+                
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 25px;
+                    height: 3px;
+                    background: $theme-dark;
+                    left: 0;
+                }
+                
+                &::before {
+                    top: -8px;
+                }
+                
+                &::after {
+                    top: 8px;
+                }
+            }
+            
+            &.active .hamburger-icon {
+                background: transparent;
+                
+                &::before {
+                    top: 0;
+                    transform: rotate(45deg);
+                }
+                
+                &::after {
+                    top: 0;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        
+        .nav-content {
+            display: none;
+            padding: 20px;
+            background: white;
+            
+            &.show {
+                display: block;
+            }
+        }
+        
+        .nav-logo {
+            display: none;
+        }
+        
+        .nav-brand {
+            display: none;
+        }
+        
+        .nav-links {
+            li {
+                margin-bottom: 15px;
+                
+                a {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    #research.service-box {
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+
+// Legacy Navigation (keep for other pages)
 
 .navbar-default {
     background-color: white;
@@ -155,7 +428,34 @@ aside {
 
 // Homepage Header
 
-header {
+header.split-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include background-cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, $landing-image-darkening), rgba(0, 0, 0, $landing-image-darkening)), url('../../resources/img/landing.jpg');
+    
+    .header-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    img#usi {
+        width: 60%;
+        max-width: 400px;
+    }
+}
+
+header:not(.split-header) {
     position: relative;
     width: 100%;
     min-height: auto;
@@ -196,7 +496,7 @@ header {
             }
         }
     }
-    img#epfl {
+    img#usi {
         width: 30%;
         position: absolute;
         margin-left: auto;
@@ -232,8 +532,8 @@ header {
                 }
             }
         }
-        img#epfl {
-            width: 145px;
+        img#usi {
+            width: 400px;
         }
     }
 }
@@ -242,6 +542,12 @@ header {
 
 .section-heading {
     margin-top: 0;
+    font-size: 48px;
+}
+
+.section-subheading {
+    margin-top: 0;
+    font-size: 28px;
 }
 
 section#research-interests {
@@ -259,10 +565,6 @@ section#research-interests {
 }
 
 section#teaching {
-    p {
-        font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-    }
-
     img {
         max-width: 30px;
         max-height: 30px;
@@ -284,178 +586,13 @@ section#teaching {
         width: 40%;
         position:relative;
     }
-}
-
-section#mnlp {
-
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-
-    .toc_title {
-        font-weight: 700;
-        margin-bottom: 5px;
-    }
-
-    ul {
-        padding-left: 12px !important;
-    }
 
     li {
-        font-size: 16px;
-        list-style: outside none none !important;
-        margin-bottom: 8px;
-    }
-
-
-    table {
-        border-spacing: 1;
-        border-collapse: collapse;
-        background: #fff;
-        border-radius: 10px;
-        overflow: hidden;
-        width: 100%;
-        margin: 0 auto;
-        position:relative;
-    }
-
-    table * {
-        position:relative;
-    }
-
-    table td, table th {
-        padding-left:8px;
-    }
-
-    table thead tr {
-        height: 60px;
-        background:#36304a;
-    }
-
-    table tbody tr {
-        height:50px;
-    }
-
-    table tbody tr:last-child {
-        border:0;
-    }
-
-    table td, table th {
-        text-align:left;
-    }
-
-    table td.l, table th.l {
-        text-align:right;
-    }
-
-    table td.c, table th.c {
-        text-align:center;
-    }
-
-    table td.r, table th.r {
-        text-align:center;
-    }
-
-    table th {
-        font-size: 18px;
-        color: #fff;
-        line-height: 1.2;
-        font-weight:unset;
-    }
-
-    tbody tr:nth-child(even) {
-        background-color:#f5f5f5;
-    }
-
-    tbody tr {
-        font-size: 15px;
-        color: gray;
-        line-height: 1.2;
-        font-weight:unset;
-    }
-
-    tr td {
-        padding: 10px;
-    }
-
-    #assignments-section, #project-section {
-        padding: 0 20px 10px;
-    }
-
-    div.box {
-        margin: 15px;
-        padding: 15px 15px 10px 15px;
-        border: 1px solid $theme-primary;
-        border-radius: 10px;
-        background-color: $theme-primary-background;
-    }
-
-    div.faded {
-        border: 1px solid black !important;
-        background-color: #ddd !important;
-    }
-
-
-    @media screen and (max-width: 992px) {
-        table {
-            display:block;
-        }
-
-        table > *, table tr, table td, table th {
-            display:block;
-        }
-
-        table thead {
-            display:none;
-        }
-
-        table tbody tr {
-            height: auto;
-            padding:37px 0;
-        }
-
-        table tbody tr td {
-            padding-left: 40% !important;
-            margin-bottom:24px;
-        }
-
-        table tbody tr td:last-child {
-            margin-bottom:0;
-        }
-
-        table tbody tr td:before {
-            font-size: 14px;
-            color: #999;
-            line-height: 1.2;
-            font-weight: unset;
-            position: absolute;
-            width: 40%;
-            left: 30px;
-            top:0;
-        }
-/*
-        .column4, .column5, .column6 {
-            text-align:left
-        }
-
-        .column4, .column5, .column6, .column1, .column2, .column3 {
-            width:100%
-        }*/
-
-        tbody tr {
-            font-size:14px
-        }
-    }
-
-    @media (max-width: 576px) {
-        .container-table100 {
-            padding-left: 15px;
-            padding-right: 15px
-        }
+        font-size: 20px;
     }
 }
 
 section#team {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-
     div.container div.row {
         @media (min-width: 992px) {
             padding-bottom: 30px;
@@ -559,13 +696,11 @@ section#team {
 }
 
 section#not-found {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-
     img {
         max-width: 100%;
     }
 }
-section#publications {
+section#research {
     ul li>div {
         padding: 10px;
 
@@ -593,10 +728,7 @@ section#publications {
         }
     }
 }
-section#contact, section#publications {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-
-
+section#contact, section#research {
     span.indented {
         margin: 2% 0 0 1%;
     }
@@ -795,6 +927,11 @@ section#contact, section#publications {
             }
         }
     }
+
+    .publication-details {
+        color: rgba($theme-dark, .7);
+        font-weight: 200;
+    }
 }
 
 .service-box {
@@ -892,7 +1029,7 @@ section#contact, section#publications {
 .btn {
     @include sans-serif-font;
     border: none;
-    border-radius: 300px;
+    // border-radius: 300px;
     font-weight: 700;
     text-transform: uppercase;
 }

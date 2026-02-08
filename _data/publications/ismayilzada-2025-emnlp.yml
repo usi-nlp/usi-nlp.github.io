@@ -14,10 +14,10 @@
       nlp-lab: false
     -
       name: Antoine Bosselut
-      nlp-lab: true
+      nlp-lab: false
     -
       name: Lonneke van der Plas
-      nlp-lab: false
+      nlp-lab: true
     -
       name: Roger E. Beaty
       nlp-lab: false

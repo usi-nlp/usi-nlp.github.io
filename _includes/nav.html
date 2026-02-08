@@ -1,37 +1,36 @@
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" href="index.html">NLP Lab</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="{{url}}/team.html">Team</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="{{url}}/publications.html">Publications</a>
-                </li>
-                <!-- <li>
-                    <a class="page-scroll" href="{{url}}/projects.html">Projects</a>
-                </li> -->
-                <li>
-                    <a class="page-scroll" href="{{url}}/teaching.html">Teaching</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="{{url}}/contact.html">Join Us</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+<nav id="mainNav" class="vertical-nav">
+    <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-brand">USI NLP Lab</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <span class="hamburger-icon"></span>
+        </button>
     </div>
-    <!-- /.container-fluid -->
+    <div class="nav-content" id="navContent">
+        <div class="nav-logo">
+            <img id='usi' src="resources/img/usi.png" alt="USI Logo">
+        </div>
+        <div class="nav-brand">
+            <a href="index.html">USI NLP Lab</a>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="{{url}}/team.html">Team</a>
+            </li>
+            <li>
+                <a href="{{url}}/research.html">Research</a>
+            </li>
+            <li>
+                <a href="{{url}}/teaching.html">Teaching</a>
+            </li>
+            <li>
+                <a href="{{url}}/contact.html">Join Us</a>
+            </li>
+        </ul>
+    </div>
 </nav>
+<script>
+document.getElementById('menuToggle').addEventListener('click', function() {
+    document.getElementById('navContent').classList.toggle('show');
+    this.classList.toggle('active');
+});
+</script>

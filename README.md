@@ -1,6 +1,6 @@
-# NLP lab's website!
+# USI NLP lab website!
 
-This website is built on Jekyll. To run locally, inside the `epfl-nlp.github.io` folder, run `bundle exec jekyll serve`.
+This website is built on Jekyll. To run locally, inside the `usi-nlp.github.io` folder, run `bundle install` to install dependencies followed by `bundle exec jekyll serve` to deploy locally.
 
 ## Jekyll Theme
 

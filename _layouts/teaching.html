@@ -4,8 +4,14 @@
 {% include head.html %}
 
 <body id="page-top">
-  {% include nav.html %}
-  {% include teaching.html %}
+  <div class="split-layout">
+    <div class="split-left split-content">
+      {% include teaching.html %}
+    </div>
+    <div class="split-right">
+      {% include nav.html %}
+    </div>
+  </div>
   {% include scripts.html %}
 </body>
 

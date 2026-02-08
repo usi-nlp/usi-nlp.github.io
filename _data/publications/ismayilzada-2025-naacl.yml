@@ -20,13 +20,13 @@
       nlp-lab: false
     -
       name: Antoine Bosselut
-      nlp-lab: true
+      nlp-lab: false
     - 
       name: Duygu Ataman
       nlp-lab: false
     -
       name: Lonneke van der Plas
-      nlp-lab: false
+      nlp-lab: true
 
   year: 2025
   journal: Proceedings of the Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL)

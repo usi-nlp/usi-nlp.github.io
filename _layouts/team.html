@@ -4,8 +4,14 @@
 {% include head.html %}
 
 <body id="page-top">
-  {% include nav.html %}
-  {% include team.html %}
+  <div class="split-layout">
+    <div class="split-left split-content">
+      {% include team.html %}
+    </div>
+    <div class="split-right">
+      {% include nav.html %}
+    </div>
+  </div>
   {% include scripts.html %}
   <script src="js/team.js"></script>
 </body>

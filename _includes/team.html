@@ -1,14 +1,14 @@
 <section id="team">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12">
                 <h2 class="section-heading">Our team</h2>
-                <hr class="primary">
+                <hr class="section-bar primary">
             </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         {% assign sorted_team = site.data.team | sort: "last_name" %}
         <div class="row">
             {% for member in sorted_team %}
@@ -23,7 +23,7 @@
                 {% endunless %}
             {% endfor %}
         </div>
-        <h2 class="section-heading">Research interns</h2>
+        <h2 class="section-subheading">Research interns</h2>
         <div class="row">
             {% for member in sorted_team %}
                 {% unless member.is_alumni %}
@@ -35,7 +35,7 @@
                 {% endunless %}
             {% endfor %}
         </div>  
-        <h2 class="section-heading">Master students</h2>
+        <h2 class="section-subheading">Master students</h2>
         <div class="row">
             {% for member in sorted_team %}
                 {% unless member.is_alumni %}
@@ -47,10 +47,8 @@
                 {% endunless %}
             {% endfor %}
         </div>  
-
-        <br/>
+        <h2 class="section-subheading">Alumni</h2>
         <div class="row alumni">
-            <strong>Alumni:</strong>
             <ul>
             {% for member in sorted_team %}
                 {% if member.is_alumni %}

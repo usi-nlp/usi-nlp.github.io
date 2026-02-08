@@ -1,7 +1,7 @@
 # Site settings
-title: EPFL's NLP Lab
+title: USI NLP Lab
 email:
-description: The NLP (Natural Language Processing) lab is a research group in the School of Computer and Communication Sciences at EPFL in Lausanne, Switzerland! We're a fun and passionate group, with fairly broad research interests, but mainly researching models that can understand and generate languages as well as represent knowledge and reason!
+description: USI NLP Research Lab focuses on models inspired by human cognition to create more natural and flexible handling of language by machines.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 

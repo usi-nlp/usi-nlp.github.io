@@ -5,13 +5,13 @@
       nlp-lab: true
     -
       name: Debjit Paul
-      nlp-lab: true
+      nlp-lab: false
     -
       name: Antoine Bosselut
-      nlp-lab: true
+      nlp-lab: false
     -
       name: Lonneke van der Plas
-      nlp-lab: false
+      nlp-lab: true
 
   year: 2024
   journal: arXiv preprint
