@@ -15,9 +15,9 @@
   img: mete_ismayilzada.jpg
   is_alumni: 
   website: https://www.mete.is
-  twitter: https://twitter.com/mismayilsoy
+  twitter:
   google_scholar: https://scholar.google.com/citations?user=l88cHEQAAAAJ&hl=en
-  semantic_scholar: https://www.semanticscholar.org/author/Mete-Ismayilzada/2190955045
+  semantic_scholar:
   github: https://github.com/mismayil
 
 - first_name: Molly
@@ -75,9 +75,20 @@
   semantic_scholar:
   github:
 
+- first_name: Boda
+  last_name: Sadallah
+  role: PhD student
+  img:
+  is_alumni: 
+  website: 
+  twitter: 
+  google_scholar: 
+  semantic_scholar:
+  github:
+
 - first_name: Laura
   last_name: Vasquez
-  role: PostDoctoral Researcher
+  role: Post-doctoral Researcher
   img:
   is_alumni: Yes
   website: 
@@ -88,7 +99,7 @@
 
 - first_name: Michiel
   last_name: van der Meer
-  role: PostDoctoral Researcher
+  role: Post-doctoral Researcher
   img:
   is_alumni: Yes
   website: 
@@ -99,7 +110,7 @@
 
 - first_name: Inga
   last_name: Lang
-  role: ???
+  role: Master student
   img:
   is_alumni: Yes
   website: 
@@ -110,7 +121,7 @@
 
 - first_name: Yixuan
   last_name: Xu
-  role: ???
+  role: Master student
   img:
   is_alumni: Yes
   website: 
