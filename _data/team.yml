@@ -34,13 +34,13 @@
 - first_name: Vincent
   last_name: Jung
   role: PhD student
-  img:
+  img: vincent_jung.jpg
   is_alumni: 
-  website: 
+  website: vjung99.github.io
   twitter: 
-  google_scholar: 
+  google_scholar: https://scholar.google.com/citations?user=bQx3cAgAAAAJ&hl=en
   semantic_scholar:
-  github:
+  github: https://github.com/vjung99
 
 - first_name: Diego
   last_name: Rossini
