@@ -208,12 +208,7 @@ aside {
 // }
 
 @media (min-width: 992px) {
-    #research .service-box {
-        img {
-            width: 100px;
-            height: 100px;
-        }
-    }
+    // Responsive images handled by .service-box img styles
 }
 
 // Mobile styles
@@ -341,12 +336,7 @@ aside {
         }
     }
 
-    #research .service-box {
-        img {
-            width: 150px;
-            height: 150px;
-        }
-    }
+    // Responsive images handled by .service-box img styles
 }
 
 // Legacy Navigation (keep for other pages)
@@ -553,6 +543,11 @@ header:not(.split-header) {
     font-size: 28px;
 }
 
+.section-subsubheading {
+    margin-top: 0;
+    font-size: 24px;
+}
+
 section#research-interests {
     div.row {
         h3, p {
@@ -703,7 +698,7 @@ section#not-found {
         max-width: 100%;
     }
 }
-section#research {
+section#research, section#publications {
     ul li>div {
         padding: 10px;
 
@@ -731,7 +726,7 @@ section#research {
         }
     }
 }
-section#contact, section#research {
+section#contact, section#research, section#publications {
     span.indented {
         margin: 2% 0 0 1%;
     }
@@ -940,6 +935,18 @@ section#contact, section#research {
 .service-box {
     max-width: 400px;
     margin: 50px auto 0;
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    // Smaller images for research interests section
+    &.research-interest img {
+        max-height: 120px;
+        width: auto;
+    }
+    
     p {
         margin-bottom: 0;
     }

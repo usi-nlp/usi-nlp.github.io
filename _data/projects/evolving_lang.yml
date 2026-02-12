@@ -1,0 +1,14 @@
+- title: "NCCR Evolving Language"
+  active: true
+  img: "evolving_lang.png"
+  link: "https://evolvinglanguage.ch/"
+  funding: 
+    - "SNSF (2024-2028, principle investigator)"
+    - "SNSF (2020-2023, associate investigator)"
+  people:
+    - name: "Diego Rossini"
+      role: "PhD student (USI)"
+  description: >
+    The Swiss National Centre of Competence in Research (NCCR) Evolving Language is a nationwide interdisciplinary research consortium bringing together research groups from the humanities, from language and computer science, the social sciences, and the natural sciences at an unprecedented level. 
+    Together, we aim at solving one of humanity's great mysteries: What is language? How did our species develop the capacity for linguistic expression, for processing language in the brain, and for consistently passing down new variations to the next generation? How will our capacity for language change in the face of digital communication and neuroengineering? 
+    Together with Lena Jäger and Andrea Migliano from the University of Zurich we will lead a project on lexical innovation."

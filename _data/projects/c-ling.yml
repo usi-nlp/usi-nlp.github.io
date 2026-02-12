@@ -1,0 +1,16 @@
+- title: "C-LING"
+  active: true
+  img: "c-ling.png"
+  link: "https://www.idiap.ch/en/scientific-research/projects/C-LING"
+  funding: 
+    - "SNSF 2022-2026"
+  people:
+    - name: "Molly Petersen"
+      role: "PhD student (EPFL)"
+    - name: "Mete Ismayilzada"
+      role: "PhD student (EPFL)"
+  description: >
+    This project aims to create computational models of language as a tool for creative thinking. 
+    We will extract statistical patterns from large text corpora to inform these models as well as structured knowledge bases.
+    We aim to generate new concepts by means of comparing statistical patterns in large text corpora from different cultures and domains, just like a person may get new ideas from travelling and collaborating with people from different backgrounds. 
+    At the same time, we want to go one step further by looking at more complex constructs such as new ideas, for example scientific discoveries. For such complex constructs statistical patterns alone will not suffice and structural knowledge will be added to our models.

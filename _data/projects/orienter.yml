@@ -1,0 +1,8 @@
+- title: "ORIENTER"
+  active: true
+  img: "orienter.svg"
+  link: "https://data.snf.ch/grants/grant/223488"
+  funding: 
+    - "SNSF SPIRIT 2025-2029"
+  description: >
+    This project aims to investigate what aspects of patients' language and behaviour can be effectively and efficiently modelled by very recent AI techniques in the diagnostic construct of depression disorders, considering relevant demographic variables such as cultural background (native language) and gender.

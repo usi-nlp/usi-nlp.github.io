@@ -1,0 +1,13 @@
+- title: ""
+  active: true
+  img: ""
+  link: ""
+  funding: 
+    - "funding 1"
+    - "funding 2"
+  people:
+    - name: "person 1"
+      role: "role 1"
+    - name: "person 2"
+      role: "role 2"
+  description: ""

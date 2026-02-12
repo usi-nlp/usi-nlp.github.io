@@ -10,21 +10,21 @@
   <div class="container-fluid">
       <div class="row">
           <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 text-center">
-              <div class="service-box">
+              <div class="service-box research-interest">
                   <img src="resources/img/research_interests/creativity.png" class="wow bounceIn text-primary" data-wow-delay=".1s">
                   <h3>Computational Creativity</h3>
                   <p class="text-muted">Create computational models of language as a tool for creative thinking.</p>
               </div>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 text-center">
-              <div class="service-box">
+              <div class="service-box research-interest">
                   <img src="resources/img/research_interests/cross-lingual.png" class="wow bounceIn text-primary" data-wow-delay=".1s">
                   <h3>Multilingual AI</h3>
                   <p class="text-muted">Develop AI models capable of understanding and generating multiple languages.</p>
               </div>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 text-center">
-              <div class="service-box">
+              <div class="service-box research-interest">
                   <img src="resources/img/research_interests/lexical-innovation.png" class="wow bounceIn text-primary" data-wow-delay=".1s">
                   <h3>Language Change</h3>
                   <p class="text-muted">Investigate language evolution and word formation in diverse linguistic and cultural contexts.</p>
@@ -33,21 +33,21 @@
       </div>
       <div class="row">
           <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 text-center">
-              <div class="service-box">
+              <div class="service-box research-interest">
                   <img src="resources/img/research_interests/rna-language.png" class="wow bounceIn text-primary" data-wow-delay=".1s">
                   <h3>RNA Language Modeling</h3>
                   <p class="text-muted">Model RNA sequences using natural language processing techniques.</p>
               </div>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 text-center">
-              <div class="service-box">
+              <div class="service-box research-interest">
                   <img src="resources/img/research_interests/biomedical.png" class="wow bounceIn text-primary" data-wow-delay=".1s">
                   <h3>Interest 5</h3>
                   <p class="text-muted">interest 5 description</p>
               </div>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 text-center">
-              <div class="service-box">
+              <div class="service-box research-interest">
                   <img src="resources/img/research_interests/biomedical.png" class="wow bounceIn text-primary" data-wow-delay=".1s">
                   <h3>Interest 6</h3>
                   <p class="text-muted">interest 6 description</p>
@@ -55,73 +55,100 @@
           </div>
       </div>
   </div>
-  <br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/><br/>
   <div class="container-fluid">
-      <div class="row">
-          <div class="col-lg-12">
-              <h2 class="section-subheading">Publications</h2>
-              <hr class="primary">
-          </div>
-      </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="section-subheading">Projects</h2>
+            <hr class="primary">
+        </div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="section-subsubheading">Current Projects</h2>
+            <hr class="primary">
+        </div>
+    </div>
   </div>
   <div class="container-fluid">
-    <ul>
-      {% assign pub_years = "" | split: ',' %}
-      {% assign pub_venues = "" | split: ',' %}
-      {% for publications_hash in site.data.publications %}
-        {% assign publications = publications_hash[1] %}
-        {% assign pub_years = pub_years | push: publications[0].year %}
-        {% assign venue = publications_hash[0] | split:"-" | last %}
-        {% assign pub_venues = pub_venues| push:venue %}
-      {% endfor %}
-
-      {% assign pub_venues = pub_venues | uniq | sort %}
-      {% assign oldest_paper_year = pub_years | sort | first %}
-      {% assign newest_paper_year = pub_years | sort | last %}
-      
-      {% for year in (2023..newest_paper_year) reversed %}
-        <li>
-          <input type="checkbox">
-          <i></i>
-          <h3>{{year}}</h3>
-          {% for venue in pub_venues %}
-            {% for publications_hash in site.data.publications %}
-              {% assign pub_venue = publications_hash[0] | split:"-" | last %}
-              {% assign pub = publications_hash[1][0] %}
-
-              {% if pub.year == year %}
-                {% if pub_venue == venue %}
-                  {% include components/publication.html 
-                    pub = pub
-                  %}
+    {% for project_hash in site.data.projects %}
+    {% assign project = project_hash[1][0] %}
+    {% if project.active == true %}
+      <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="service-box">
+              <img src="{{ 'resources/img/projects/' | append: project.img }}" class="wow bounceIn text-primary" data-wow-delay=".1s">
+              <h3><a href="{{ project.link }}">{{ project.title }}</a></h3>
+              <p class="text-muted">
+                {% if project.funding %}
+                {% for fund in project.funding %}
+                  {{ fund }}<br/>
+                {% endfor %}
                 {% endif %}
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        </li>
-      {% endfor %}
-      <!-- <li>
-        <input type="checkbox">
-        <i></i>
-        <h3>Selected 2020 and earlier papers</h3>
-        {% for year in (oldest_paper_year..2020) reversed %}
-
-          {% for venue in pub_venues %}
-            {% for publications_hash in site.data.publications %}
-              {% assign pub_venue = publications_hash[0] | split:"-" | last %}
-              {% assign pub = publications_hash[1][0] %}
-
-              {% if pub.year == year %}  
-                {% if pub_venue == venue %}     
-                  {% include components/publication.html 
-                    pub = pub
-                  %}
+              </p>
+              <p class="text-muted">
+                {% if project.people %}
+                {% for person in project.people %}
+                  {{ person.name }} - {{ person.role }}<br/>
+                {% endfor %}
                 {% endif %}
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        {% endfor %}
-      </li> -->
-    </ul>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-12">
+              <p class="text-muted">
+                {{ project.description }}
+              </p>
+          </div>
+      </div>
+      <br/>
+    {% endif %}
+    {% endfor %}
+  </div>
+  <br/><br/><br/><br/><br/><br/>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="section-subsubheading">Past Projects</h2>
+            <hr class="primary">
+        </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    {% for project_hash in site.data.projects %}
+    {% assign project = project_hash[1][0] %}
+    {% if project.active == false %}
+      <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="service-box">
+              <img src="{{ 'resources/img/projects/' | append: project.img }}" class="wow bounceIn text-primary" data-wow-delay=".1s">
+              <h3><a href="{{ project.link }}">{{ project.title }}</a></h3>
+              <p class="text-muted">
+                {% if project.funding %}
+                {% for fund in project.funding %}
+                  {{ fund }}<br/>
+                {% endfor %}
+                {% endif %}
+              </p>
+              <p class="text-muted">
+                {% if project.people %}
+                {% for person in project.people %}
+                  {{ person.name }} - {{ person.role }}<br/>
+                {% endfor %}
+                {% endif %}
+              </p>
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-12">
+              <p class="text-muted">
+                {{ project.description }}
+              </p>
+          </div>
+      </div>
+    {% endif %}
+    {% endfor %}
   </div>
 </section>
