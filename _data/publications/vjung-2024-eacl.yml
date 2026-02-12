@@ -1,0 +1,19 @@
+- title: "Understanding the effects of language-specific class imbalance in multilingual fine-tuning"
+  authors:
+    - 
+      name: Vincent Jung
+      nlp-lab: true
+    -
+      name: Lonneke van der Plas
+      nlp-lab: true
+
+  year: 2024
+  journal: Findings of the Association for Computational Linguistics: EACL 2024
+  link: https://aclanthology.org/2024.findings-eacl.157/
+  code: 
+  dataset: 
+  project: 
+  poster: 
+  video: 
+  demo: 
+  slides: 
