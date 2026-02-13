@@ -347,6 +347,25 @@ aside {
         }
     }
 
+    header.split-header {
+        .header-overlay {
+            justify-content: center;
+            padding: 60px 30px;
+        }
+
+        .landing-text {
+            text-align: center;
+        }
+
+        .landing-title {
+            font-size: 38px;
+        }
+
+        .landing-subtitle {
+            font-size: 20px;
+        }
+    }
+
     // Responsive images handled by .service-box img styles
 }
 
@@ -450,7 +469,42 @@ header.split-header {
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        padding: 80px;
+    }
+
+    .landing-text {
+        color: white;
+        max-width: 680px;
+        text-align: left;
+    }
+
+    .landing-kicker {
+        @include sans-serif-font;
+        font-size: 18px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(white, .75);
+        margin-bottom: 16px;
+    }
+
+    .landing-title {
+        font-weight: 700;
+        font-size: 54px;
+        line-height: 1.1;
+        margin: 0 0 20px 0;
+    }
+
+    .landing-subtitle {
+        font-size: 24px;
+        font-weight: 300;
+        margin: 0;
+        color: rgba(white, .9);
+
+        #txt-rotate {
+            font-weight: 600;
+            color: white;
+        }
     }
     
     img#usi {
