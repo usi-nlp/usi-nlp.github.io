@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
         {% assign sorted_team = site.data.team | sort: "last_name" %}
         <div class="row">
             {% for member in sorted_team %}
@@ -22,7 +22,27 @@
                     {% endif %}
                 {% endunless %}
             {% endfor %}
-        </div>
+        </div> -->
+    <div class="container-fluid">
+    {% assign leaders = site.data.team | where: "role", "Lab leader" | sort: "last_name" %}
+    {% assign phds = site.data.team | where: "role", "PhD student" | sort: "last_name" %}
+    {% assign visiting = site.data.team | where: "role", "Visiting student" | sort: "last_name" %}
+    {% assign rest = site.data.team | where_exp: "m", "m.role != 'Lab leader' and m.role != 'PhD student' and m.role != 'Visiting student'" | sort: "last_name" %}
+    {% assign sorted_team = leaders | concat: phds | concat: rest | concat: visiting %}
+
+    <div class="row">
+        {% for member in sorted_team %}
+            {% unless member.is_alumni %}
+                {% if member.role != 'Master student' %}
+                    {% if member.role != 'Research intern' %}
+                        {% include components/member.html 
+                            member = member
+                        %}
+                    {% endif %}
+                {% endif %}
+            {% endunless %}
+        {% endfor %}
+    </div>
         <!-- <h2 class="section-subheading">Research interns</h2>
         <div class="row">
             {% for member in sorted_team %}

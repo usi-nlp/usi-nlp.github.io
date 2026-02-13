@@ -651,14 +651,24 @@ section#team {
     div.service-box {
         margin-bottom: 15px;
 
+        // img.member-photo {
+        //     max-width: 100%;
+        //     overflow:hidden;
+        //     object-fit: cover;
+        //     border: 1px solid black;
+        //     /*filter: grayscale(100%) contrast(120%);*/
+        //     transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        // }
         img.member-photo {
-            max-width: 100%;
-            overflow:hidden;
-            object-fit: cover;
-            border: 1px solid black;
-            /*filter: grayscale(100%) contrast(120%);*/
-            transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-        }
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        object-fit: cover;
+        max-width: 100%;
+        overflow: hidden;
+        border: 1px solid black;
+        transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
 
         div.socials {
             margin-top: 0.25rem;
