@@ -10,8 +10,13 @@
 
     <div class="container-fluid">
         {% assign sorted_team = site.data.team | sort: "last_name" %}
+        {% assign leaders = site.data.team | where: "role", "Associate Professor, PI" | sort: "last_name" %}
+        {% assign phds = site.data.team | where: "role", "PhD student" | sort: "last_name" %}
+        {% assign visiting = site.data.team | where: "role", "Visiting Researcher" | sort: "last_name" %}
+        {% assign rest = site.data.team | where_exp: "m", "m.role != 'Associate Professor, PI' and m.role != 'PhD student' and m.role != 'Visiting Researcher'" | sort: "last_name" %}
+        {% assign ordered_team = leaders | concat: phds | concat: rest | concat: visiting %}
         <div class="row">
-            {% for member in sorted_team %}
+            {% for member in ordered_team %}
                 {% unless member.is_alumni %}
                     {% if member.role != 'Master student' %}
                         {% if member.role != 'Research intern' %}
