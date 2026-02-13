@@ -75,16 +75,18 @@
   semantic_scholar:
   github:
 
+
 - first_name: Boda
   last_name: Sadallah
   role: PhD student
-  img:
+  img: boda_sadallah.jpg
   is_alumni: 
-  website: 
+  website: https://bodasadallah.github.io/
   twitter: 
-  google_scholar: 
+  google_scholar: https://scholar.google.com/citations?user=XtAYJs8AAAAJ&hl=en
   semantic_scholar:
-  github:
+  github: https://github.com/bodasadallah
+
 
 - first_name: Prajit
   last_name: Dhar
