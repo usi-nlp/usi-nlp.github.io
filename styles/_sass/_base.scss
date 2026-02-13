@@ -105,6 +105,14 @@ aside {
     right: 0;
     top: 0;
     height: 100vh;
+    overflow-y: auto;
+}
+
+// Handle smaller desktop/tablet screens where content might overflow
+@media (max-width: 1400px) and (min-width: 992px) {
+    .split-right {
+        align-items: flex-start;
+    }
 }
 
 // Mobile nav header (hidden on desktop)
@@ -136,7 +144,7 @@ aside {
         
         img#usi {
             width: 100%;
-            max-width: 200px;
+            max-width: 150px;
         }
     }
     
@@ -167,7 +175,7 @@ aside {
             
             a {
                 color: $theme-dark;
-                font-size: 48px;
+                font-size: 40px;
                 font-weight: 300;
                 text-transform: uppercase;
                 text-decoration: none;
