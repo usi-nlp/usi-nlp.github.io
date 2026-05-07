@@ -1,0 +1,9 @@
+- title: "SATURNA"
+  active: true
+  img: "saturna.avif"
+  link: "https://www.saturna.ch/"
+  funding:
+    - "Swiss National Science Foundation"
+    - "University of Bern, EPFL, Idiap, USI"
+  description: >
+    In this interdisciplinary project with the University of Bern, EPFL and Idiap, we will leverage advanced AI methods, including large language models, to learn informative representations of RNA sequences. By modeling RNA as a structured language, we seek to uncover the deep features and contextual dependencies embedded within its sequence. In parallel, we interpret what these models learn, probing the internal representations to understand what biological information they capture, how they encode structure, regulation, and function, and what this reveals about the underlying grammar of RNA biology.

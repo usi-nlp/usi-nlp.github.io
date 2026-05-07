@@ -1021,6 +1021,13 @@ section#contact, section#research, section#publications {
         max-height: 120px;
         width: auto;
     }
+
+img.project-logo {
+    max-height: 150px;
+    width: auto;
+    max-width: 100%;
+    mix-blend-mode: multiply;
+}
     
     p {
         margin-bottom: 0;

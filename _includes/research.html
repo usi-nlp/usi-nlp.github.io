@@ -77,10 +77,10 @@
     {% for project_hash in site.data.projects %}
     {% assign project = project_hash[1][0] %}
     {% if project.active == true %}
-      <div class="row">
+      <div class="row align-items-center">
           <div class="col-md-4 col-sm-12">
             <div class="service-box">
-              <img src="{{ 'resources/img/projects/' | append: project.img }}" class="wow bounceIn text-primary" data-wow-delay=".1s">
+              <img src="{{ 'resources/img/projects/' | append: project.img }}" class="wow bounceIn text-primary project-logo" data-wow-delay=".1s">
               <h3><a href="{{ project.link }}">{{ project.title }}</a></h3>
               <p class="text-muted">
                 {% if project.funding %}
@@ -121,10 +121,10 @@
     {% for project_hash in site.data.projects %}
     {% assign project = project_hash[1][0] %}
     {% if project.active == false %}
-      <div class="row">
+      <div class="row align-items-center">
           <div class="col-md-4 col-sm-12">
             <div class="service-box">
-              <img src="{{ 'resources/img/projects/' | append: project.img }}" class="wow bounceIn text-primary" data-wow-delay=".1s">
+              <img src="{{ 'resources/img/projects/' | append: project.img }}" class="wow bounceIn text-primary project-logo" data-wow-delay=".1s">
               <h3><a href="{{ project.link }}">{{ project.title }}</a></h3>
               <p class="text-muted">
                 {% if project.funding %}
