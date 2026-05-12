@@ -74,8 +74,7 @@
     </div>
   </div>
   <div class="container-fluid">
-    {% for project_hash in site.data.projects %}
-    {% assign project = project_hash[1][0] %}
+    {% for project in site.data.projects %}
     {% if project.active == true %}
       <div class="row align-items-center">
           <div class="col-md-4 col-sm-12">
@@ -118,8 +117,7 @@
     </div>
   </div>
   <div class="container-fluid">
-    {% for project_hash in site.data.projects %}
-    {% assign project = project_hash[1][0] %}
+    {% for project in site.data.projects %}
     {% if project.active == false %}
       <div class="row align-items-center">
           <div class="col-md-4 col-sm-12">

@@ -1,0 +1,74 @@
+- title: "SATURNA"
+  year_start: 2026
+  year_end: 2030
+  active: true
+  img: "saturna.avif"
+  link: "https://www.saturna.ch/"
+  funding:
+    - "SNSF (2026-2030)"
+    - "University of Bern, EPFL, Idiap, USI"
+  description: >
+    In this interdisciplinary project with the University of Bern, EPFL and Idiap, we will leverage advanced AI methods, including large language models, to learn informative representations of RNA sequences. By modeling RNA as a structured language, we seek to uncover the deep features and contextual dependencies embedded within its sequence. In parallel, we interpret what these models learn, probing the internal representations to understand what biological information they capture, how they encode structure, regulation, and function, and what this reveals about the underlying grammar of RNA biology.
+
+- title: "ORIENTER"
+  year_start: 2025
+  year_end: 2029
+  active: true
+  img: "snsf.svg"
+  link: "https://data.snf.ch/grants/grant/223488"
+  funding:
+    - "SNSF SPIRIT 2025-2029"
+  description: >
+    This project aims to investigate what aspects of patients' language and behaviour can be effectively and efficiently modelled by very recent AI techniques in the diagnostic construct of depression disorders, considering relevant demographic variables such as cultural background (native language) and gender.
+
+- title: "AI2Pub"
+  year_start: 2025
+  year_end: 2028
+  active: true
+  img: "snsf.svg"
+  link: "https://data.snf.ch/grants/grant/232373"
+  funding:
+    - "SNSF Agora 2025-2028"
+  description: >
+    Artificial intelligence (AI) has become a powerful and pervasive technology, influencing many aspects of our daily lives.
+    However, its rapid growth and integration into society raise complex questions and concerns.
+    Our team of scientists and communication experts are committed to improving public understanding of AI technologies, fostering a positive societal impact.
+    Building on the foundations of our previous project, NewsOnAI, we will go beyond traditional communication channels such as workshops and media publications.
+    Our proactive engagement efforts will establish dynamic, two-way communication between scientists and the public, utilizing new formats like interactive exhibitions and theater performances.
+    Analyzing feedback from these initiatives will enable scientists to pursue research directions that effectively address societal concerns. Over time, we anticipate that our efforts will create a multiplying social impact, fostering informed public discourse and a deeper understanding of AI technologies.
+
+- title: "NCCR Evolving Language"
+  year_start: 2020
+  year_end: 2028
+  active: true
+  img: "evolving_lang.png"
+  link: "https://evolvinglanguage.ch/"
+  funding:
+    - "SNSF (2024-2028, principle investigator)"
+    - "SNSF (2020-2023, associate investigator)"
+  people:
+    - name: "Diego Rossini"
+      role: "PhD student (USI)"
+  description: >
+    The Swiss National Centre of Competence in Research (NCCR) Evolving Language is a nationwide interdisciplinary research consortium bringing together research groups from the humanities, from language and computer science, the social sciences, and the natural sciences at an unprecedented level.
+    Together, we aim at solving one of humanity's great mysteries: What is language? How did our species develop the capacity for linguistic expression, for processing language in the brain, and for consistently passing down new variations to the next generation? How will our capacity for language change in the face of digital communication and neuroengineering?
+    Together with Lena Jäger and Andrea Migliano from the University of Zurich we will lead a project on lexical innovation.
+
+- title: "C-LING"
+  year_start: 2022
+  year_end: 2026
+  active: true
+  img: "snsf.svg"
+  link: "https://www.idiap.ch/en/scientific-research/projects/C-LING"
+  funding:
+    - "SNSF 2022-2026"
+  people:
+    - name: "Molly Petersen"
+      role: "PhD student (EPFL)"
+    - name: "Mete Ismayilzada"
+      role: "PhD student (EPFL)"
+  description: >
+    This project aims to create computational models of language as a tool for creative thinking.
+    We will extract statistical patterns from large text corpora to inform these models as well as structured knowledge bases.
+    We aim to generate new concepts by means of comparing statistical patterns in large text corpora from different cultures and domains, just like a person may get new ideas from travelling and collaborating with people from different backgrounds.
+    At the same time, we want to go one step further by looking at more complex constructs such as new ideas, for example scientific discoveries. For such complex constructs statistical patterns alone will not suffice and structural knowledge will be added to our models.
