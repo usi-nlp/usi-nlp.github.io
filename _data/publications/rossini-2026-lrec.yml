@@ -1,0 +1,19 @@
+- title: "From 124 Million Tokens to 1,021 Neologisms: A Large-Scale Pipeline for Automatic Neologism Detection"
+  authors:
+    -
+      name: Diego Rossini
+      nlp-lab: true
+    -
+      name: Lonneke van der Plas
+      nlp-lab: true
+
+  year: 2026
+  journal: Proceedings of the NeoLLM Workshop at LREC 2026
+  link: https://arxiv.org/abs/2605.06426
+  code:
+  dataset:
+  project:
+  poster:
+  video:
+  demo:
+  slides:

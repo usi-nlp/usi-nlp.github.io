@@ -92,10 +92,43 @@
   last_name: Dhar
   role: Visiting Researcher
   img:
+  is_alumni: Yes
+  website:
+  twitter:
+  google_scholar:
+  semantic_scholar:
+  github:
+
+- first_name: Ricardo
+  last_name: Sacco
+  role: Master student
+  img:
   is_alumni:
-  website: 
-  twitter: 
-  google_scholar: 
+  website:
+  twitter:
+  google_scholar:
+  semantic_scholar:
+  github:
+
+- first_name: Innocent
+  last_name: Kisoka
+  role: Master student
+  img:
+  is_alumni:
+  website:
+  twitter:
+  google_scholar:
+  semantic_scholar:
+  github:
+
+- first_name: Tolgonai
+  last_name: Nasipbek Kyzy
+  role: Master student
+  img:
+  is_alumni:
+  website:
+  twitter:
+  google_scholar:
   semantic_scholar:
   github:
 

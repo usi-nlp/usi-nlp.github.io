@@ -1,0 +1,34 @@
+- title: "Skill Extraction from Resumes and Job Offers across Six Languages"
+  authors:
+    -
+      name: Laura Vásquez-Rodríguez
+      nlp-lab: true
+    -
+      name: Bertrand Audrin
+      nlp-lab: false
+    -
+      name: Samuel Michel
+      nlp-lab: false
+    -
+      name: Samuele Galli
+      nlp-lab: false
+    -
+      name: Julneth Rogenhofer
+      nlp-lab: false
+    -
+      name: Jacopo Negro Cusa
+      nlp-lab: false
+    -
+      name: Lonneke van der Plas
+      nlp-lab: true
+
+  year: 2026
+  journal: Proceedings of the 11th Edition of the Swiss Text Analytics Conference (SwissText)
+  link: https://aclanthology.org/2026.swisstext-1.10/
+  code:
+  dataset:
+  project:
+  poster:
+  video:
+  demo:
+  slides:

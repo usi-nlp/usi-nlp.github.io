@@ -1,0 +1,25 @@
+- title: "HintsOfTruth: A Multimodal Checkworthiness Detection Dataset with Real and Synthetic Claims"
+  authors:
+    -
+      name: Michiel Van Der Meer
+      nlp-lab: true
+    -
+      name: Pavel Korshunov
+      nlp-lab: false
+    -
+      name: Sébastien Marcel
+      nlp-lab: false
+    -
+      name: Lonneke van der Plas
+      nlp-lab: true
+
+  year: 2025
+  journal: Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL)
+  link: https://aclanthology.org/2025.acl-long.1510/
+  code:
+  dataset:
+  project:
+  poster:
+  video:
+  demo:
+  slides:

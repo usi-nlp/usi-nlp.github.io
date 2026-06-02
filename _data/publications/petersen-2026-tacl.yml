@@ -1,0 +1,22 @@
+- title: "Modelling Analogies and Analogical Reasoning: Connecting Cognitive Science Theory and NLP Research"
+  authors:
+    -
+      name: Molly R. Petersen
+      nlp-lab: true
+    -
+      name: Claire E. Stevenson
+      nlp-lab: false
+    -
+      name: Lonneke van der Plas
+      nlp-lab: true
+
+  year: 2026
+  journal: Transactions of the Association for Computational Linguistics (TACL)
+  link: https://arxiv.org/abs/2509.09381
+  code:
+  dataset:
+  project:
+  poster:
+  video:
+  demo:
+  slides:

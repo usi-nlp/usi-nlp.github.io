@@ -1161,3 +1161,183 @@ body {
     -webkit-tap-highlight-color: $theme-dark;
 }
 
+// Homepage sections
+
+// Homepage — background image fixed to the left panel, all text floats over it
+
+.home-left {
+    @include background-cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url('../../resources/img/landing.jpg');
+}
+
+.home-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px !important; // override global section padding
+
+    .hero-text {
+        max-width: 800px;
+    }
+
+    .hero-kicker {
+        @include sans-serif-font;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: rgba(white, .75);
+        margin-bottom: 24px;
+    }
+
+    .hero-title {
+        @include sans-serif-font;
+        font-weight: 700;
+        font-size: 88px;
+        line-height: 1.0;
+        margin: 0 0 28px;
+        color: white;
+    }
+
+    .hero-tagline {
+        font-size: 28px;
+        font-weight: 400;
+        margin: 0;
+        color: rgba(white, .9);
+
+        #txt-rotate {
+            font-weight: 600;
+            color: white;
+        }
+    }
+}
+
+.home-section-heading {
+    @include sans-serif-font;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(white, .5);
+    margin: 0 0 8px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(white, .2);
+}
+
+.home-about {
+    padding: 80px !important; // override global section padding
+    padding-bottom: 20px !important;
+
+    p {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 1.8;
+        color: white;
+        margin-bottom: 18px;
+
+        a {
+            color: white;
+            text-decoration: underline;
+            text-decoration-color: rgba(white, .4);
+
+            &:hover {
+                text-decoration-color: white;
+            }
+        }
+    }
+}
+
+.home-news {
+    padding: 60px 80px 100px !important; // override global section padding
+
+    .news-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .news-item {
+        display: flex;
+        gap: 32px;
+        padding: 26px 0;
+        border-top: 1px solid rgba(white, .15);
+
+        &:first-child {
+            border-top: none;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid rgba(white, .15);
+        }
+    }
+
+    .news-date {
+        @include sans-serif-font;
+        flex-shrink: 0;
+        width: 100px;
+        font-size: 15px;
+        font-weight: 400;
+        color: rgba(white, .6);
+        padding-top: 4px;
+    }
+
+    .news-body {
+        flex: 1;
+    }
+
+    .news-badge {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        background: rgba(white, .18);
+        color: white;
+        padding: 2px 8px;
+        margin-bottom: 8px;
+        border-radius: 2px;
+    }
+
+    .news-text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.65;
+        margin: 0;
+        color: white;
+
+        a {
+            color: white;
+            text-decoration: underline;
+            text-decoration-color: rgba(white, .4);
+
+            &:hover {
+                text-decoration-color: white;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .home-hero {
+        padding: 80px 28px 40px !important;
+
+        .hero-title { font-size: 52px; }
+        .hero-tagline { font-size: 20px; }
+    }
+
+    .home-about {
+        padding: 40px 28px 20px !important;
+        p { font-size: 18px; }
+    }
+
+    .home-news {
+        padding: 40px 28px 80px !important;
+
+        .news-text { font-size: 17px; }
+        .news-item { flex-direction: column; gap: 6px; }
+        .news-date { width: auto; }
+    }
+}
+
