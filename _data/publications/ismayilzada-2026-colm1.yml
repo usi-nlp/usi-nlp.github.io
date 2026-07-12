@@ -20,7 +20,7 @@
       nlp-lab: false
 
   year: 2026
-  journal: ICML Human-AI Co-Creativity Workshop
+  journal: Proceedings of the Conference on Language Modeling (COLM). Also presented at the ICML Workshop on Human-AI Co-Creativity.
   link: https://arxiv.org/abs/2604.03374
   code: https://github.com/mismayil/cresowlve
   dataset: https://huggingface.co/datasets/mismayil/cresowlve
