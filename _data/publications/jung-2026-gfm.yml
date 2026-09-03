@@ -9,8 +9,8 @@
     - name: Pascal Frossard
       nlp-lab: false
   year: 2026
-  journal: Workshop on Graph Foundation Models - A New Era for Graph Machine Learning
-  link: 
+  journal: ICML Workshop on Graph Foundation Models - A New Era for Graph Machine Learning
+  link: https://openreview.net/pdf?id=dGJeSIPdnc
   code: 
   dataset: 
   project: 
