@@ -1,0 +1,22 @@
+- title: "Does AI-Generated Scientific Text Follow Human Argumentation Patterns? A CARS-Based Comparison of Research Article Introductions"
+  authors:
+    -
+      name: Abdelrahman Sadallah
+      nlp-lab: true
+    -
+      name: Narjes Sheikh Asadi
+      nlp-lab: false
+    -
+      name: Lonneke van der Plas
+      nlp-lab: true
+
+  year: 2027
+  journal: "Findings of the Association for Computational Linguistics: EACL 2027"
+  link: https://arxiv.org/abs/2610.01353
+  code:
+  dataset:
+  project:
+  poster:
+  video:
+  demo:
+  slides:
